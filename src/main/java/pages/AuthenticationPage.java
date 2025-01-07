@@ -11,9 +11,10 @@ public class AuthenticationPage {
     {
         this.driver=driver;
     }
-public void createAccount(String emailId){
+public  RegisterUserPage createAccount(String emailId){
     driver.findElement(emailTextBox).sendKeys(emailId);
     driver.findElement(createActBtn).click();
+    return new RegisterUserPage(driver);
 }
 }
 
